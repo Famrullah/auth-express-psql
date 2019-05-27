@@ -1,0 +1,8 @@
+node_modules
+*.log
+*.gz
+
+# OS X
+.DS_Store*
+Icon?
+._*
