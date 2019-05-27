@@ -2,9 +2,9 @@
 2. make config.json
 3. {
   "development": {
-    "username": "faisalamrullah",
-    "password": 1234,
-    "database": "myBlog",
+    "username": "username",
+    "password": password,
+    "database": "your database",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
