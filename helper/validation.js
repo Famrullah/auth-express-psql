@@ -3,11 +3,15 @@ const Joi = require('joi');
 module.exports = {
   register(req, res, next) {
     const schema = {
-      firstName: Joi.string(),
-      lastName: Joi.string(),
-      role: Joi.number(),
-      email: Joi.string().email(),
-      password: Joi.string().regex(new RegExp('^[a-zA-Z0-9]{8,32}$'))
+      firstName: Joi.string().required(),
+      lastName: Joi.string().required(),
+      role: Joi.number().required(),
+      email: Joi.string()
+        .email()
+        .required(),
+      password: Joi.string()
+        .required()
+        .regex(new RegExp('^[a-zA-Z0-9]{8,32}$'))
     };
     const { error } = Joi.validate(req.body, schema);
     if (error) {

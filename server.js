@@ -2,7 +2,7 @@ import express from 'express';
 import BodyParser from 'body-parser';
 import morgan from 'morgan';
 import { sequelize } from './models';
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 const app = express();
 
 app.use(BodyParser.urlencoded({ extended: true }));

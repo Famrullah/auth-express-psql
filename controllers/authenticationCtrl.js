@@ -37,15 +37,20 @@ module.exports = {
       const match = await bcrypt.compare(password, user.password);
       if (!match) {
         return res.status(403).send({
-          error: password
+          error: 'password is incorrect'
         });
       }
       const userJson = user.toJSON();
       res.send({ user: userJson, token: jwtSignUser(userJson), msg: 'succes' });
     } catch (err) {
       res.status(500).send({
-        error: err
+        error: 'err'
       });
     }
+  },
+  async test(req, res) {
+    res.send({
+      data: 'hallo'
+    });
   }
 };
